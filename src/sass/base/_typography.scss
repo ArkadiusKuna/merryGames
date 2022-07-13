@@ -19,8 +19,18 @@
     }
 
     &__text {
-        font-size: 1.7rem;
+        font-size: 2rem;
         color: var(--color-secondary);
         margin-bottom: .5rem;
+    }
+}
+
+.paragraph {
+    font-size: 1.7rem;
+    font-weight: 300;
+    color: var(--color-white);
+
+    &:not(:last-child) {
+        margin-bottom: 5rem;
     }
 }

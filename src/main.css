@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -15,6 +16,8 @@
   --color-primary-dark: #0f1934;
   --color-primary-light: #3055ba;
   --color-secondary: #ff4d00;
+  --color-secondary-dark: #aa3300;
+  --color-secondary-light: #FFA680;
   --color-grey-dark-1: #a9a9a9;
   --color-black: #000;
   --color-white: #fff;
@@ -66,9 +69,18 @@ body {
   text-transform: uppercase;
 }
 .title-box__text {
-  font-size: 1.7rem;
+  font-size: 2rem;
   color: var(--color-secondary);
   margin-bottom: 0.5rem;
+}
+
+.paragraph {
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: var(--color-white);
+}
+.paragraph:not(:last-child) {
+  margin-bottom: 5rem;
 }
 
 /**
@@ -323,6 +335,11 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 }
+.mobile-nav__link:link span, .mobile-nav__link:visited span {
+  color: var(--color-secondary);
+  margin-right: 0.9rem;
+  display: inline-block;
+}
 .mobile-nav__checkbox:checked ~ .mobile-nav__background {
   transform: scale(62);
 }
@@ -378,6 +395,10 @@ body {
   max-height: 8rem;
 }
 
+.section-intro {
+  width: 100%;
+}
+
 .intro-slider__swiper-slide {
   display: flex;
   padding-top: 120%;
@@ -400,5 +421,56 @@ body {
 }
 .intro-slider__swiper-slide--5 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/shadow-warrior-3-small.webp);
+}
+
+.section-professional {
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/professional-section-bg.webp);
+  background-size: cover;
+  background-position: 50% 50%;
+  padding: 5rem 1rem;
+}
+
+.about {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--color-secondary-dark);
+  padding: 2rem;
+  margin: 0 auto;
+}
+.about__image-box {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 4rem 0;
+}
+.about__image {
+  width: 90%;
+  max-height: 30rem;
+  border-radius: 50%;
+}
+.about__content {
+  text-align: left;
+}
+.about__title {
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--color-secondary-light);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.about::before {
+  content: "“";
+  position: absolute;
+  top: 34rem;
+  left: 0;
+  line-height: 1;
+  font-size: 20rem;
+  color: var(--color-secondary-light);
+  font-family: sans-serif;
+  overflow: hidden;
 }
 /*# sourceMappingURL=main.css.map */
