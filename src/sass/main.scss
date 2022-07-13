@@ -2,9 +2,18 @@
 @import 'base/base';
 @import 'base/typography';
 
-@import 'pages/index';
-
 @import 'utils/functions';
 @import 'utils/mixins';
 @import 'utils/utilities';
 @import 'utils/variables';
+
+@import '../../node_modules/swiper/swiper';
+@import '../../node_modules/swiper/modules/autoplay/autoplay';
+@import '../../node_modules/swiper/modules/effect-fade/effect-fade';
+
+@import 'layout/header';
+@import 'layout/mobile-nav';
+
+@import 'components/logo';
+
+@import 'pages/index';

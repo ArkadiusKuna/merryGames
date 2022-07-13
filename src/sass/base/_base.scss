@@ -1,0 +1,38 @@
+:root {
+    --color-primary-dark: #0f1934;
+    --color-primary-light: #3055ba;
+
+    --color-secondary: #ff4d00;
+
+    --color-grey-dark-1: #a9a9a9;
+
+    --color-black: #000;
+    --color-white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 50%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-black);
+    position: relative;
+    overflow-x: hidden;
+
+    min-height: 1000px;
+}

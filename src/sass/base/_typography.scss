@@ -1,0 +1,26 @@
+.title-box {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    width: 97%;
+    direction: rtl;
+    background-color: rgba(128,128,128,.6);
+    border-top: 2px solid var(--color-secondary);
+    padding: .5rem;
+
+    &__title {
+        font-size: 2.5rem;
+        font-weight: 500;
+        color: var(--color-white);
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-size: 1.7rem;
+        color: var(--color-secondary);
+        margin-bottom: .5rem;
+    }
+}
