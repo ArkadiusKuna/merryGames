@@ -12,6 +12,16 @@
     transform: translateX(0);
   }
 }
+@keyframes progressBar {
+  0% {
+    opacity: 0.2;
+    width: 0%;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
 :root {
   --color-primary-dark: #0f1934;
   --color-primary-light: #3055ba;
@@ -43,10 +53,9 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  color: var(--color-black);
+  color: var(--color-white);
   position: relative;
   overflow-x: hidden;
-  min-height: 1000px;
 }
 
 .title-box {
@@ -81,6 +90,39 @@ body {
 }
 .paragraph:not(:last-child) {
   margin-bottom: 5rem;
+}
+
+.section-title {
+  font-size: 3rem;
+  letter-spacing: 3px;
+  color: var(--color-white);
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+.section-title__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: inherit;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.section-title__header span {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+.section-title__description {
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.active {
+  animation: progressBar 2s;
 }
 
 /**
@@ -438,7 +480,7 @@ body {
   justify-content: center;
   background-color: var(--color-secondary-dark);
   padding: 2rem;
-  margin: 0 auto;
+  margin: 0 0 5rem 0;
 }
 .about__image-box {
   display: flex;
@@ -447,7 +489,7 @@ body {
 }
 .about__image {
   width: 90%;
-  max-height: 30rem;
+  max-height: 26rem;
   border-radius: 50%;
 }
 .about__content {
@@ -472,5 +514,55 @@ body {
   color: var(--color-secondary-light);
   font-family: sans-serif;
   overflow: hidden;
+}
+
+.skills {
+  font-size: 1.7rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1rem;
+  transition: all 2s;
+}
+.skills__box {
+  width: 100%;
+  padding: 1rem;
+}
+.skills__box--70 {
+  width: 70%;
+}
+.skills__box--75 {
+  width: 75%;
+}
+.skills__box--80 {
+  width: 80%;
+}
+.skills__box--85 {
+  width: 85%;
+}
+.skills__box--95 {
+  width: 95%;
+}
+.skills__name {
+  font-size: inherit;
+}
+.skills__progress {
+  display: flex;
+  align-items: center;
+}
+.skills__bar {
+  width: 100%;
+  background-image: linear-gradient(to left, rgb(255, 166, 128), rgb(170, 51, 0));
+  height: 12px;
+  display: inline-block;
+}
+.skills__percent {
+  font-weight: 400;
+  opacity: 0;
+  transition: opacity 2s;
+  margin-left: 1.3rem;
+}
+.skills__bar.active ~ .skills__percent {
+  opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */
