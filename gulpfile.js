@@ -23,6 +23,7 @@ const config = {
             scss: "src/sass/main.scss",
             js: "src/scripts/*.js",
             img: "src/img/*.+(png|jpg|jpeg|svg)",
+            video: 'src/video/*.+(mp4|webm)',
         },
         dist: {
             html: "dist/",
@@ -30,6 +31,7 @@ const config = {
             prodCSS: "dist/",
             js: "dist/",
             img: "dist/img/",
+            video: 'dist/video/',
         },
     },
 };
@@ -84,10 +86,18 @@ function bundleJS() {
 function imageOptimizer() {
     return src(config.paths.src.img)
         .pipe(cache(imagemin()))
-        .pipe(clonesink)
+        .pipe(clone.sink())
         .pipe(webp())
         .pipe(clonesink.tap())
         .pipe(gulp.dest(config.paths.dist.img));
+}
+
+//VIDEO COPY TASK
+function videoCopy() {
+    return src(config.paths.src.video)
+        .pipe(clone.sink())
+        .pipe(clonesink.tap())
+        .pipe(gulp.dest(config.paths.dist.video));
 }
 
 // START SERVER
@@ -109,16 +119,14 @@ function clearCache() {
 watch(config.paths.src.html, htmlMinify);
 watch(config.paths.src.allSCSS, parallel(compileSCSS, buildCSS));
 watch(config.paths.src.js, bundleJS);
-watch(config.paths.src.img, imageOptimizer);
 
 function watchTask() {
     watch(
-        [config.paths.src.html, config.paths.src.allSCSS, config.paths.src.img],
+        [config.paths.src.html, config.paths.src.allSCSS,],
         htmlMinify,
         compileSCSS,
         buildCSS,
         bundleJS,
-        imageOptimizer
     );
 }
 
@@ -128,12 +136,14 @@ exports.compileSCSS = compileSCSS;
 exports.buildCSS = buildCSS;
 exports.bundleJS = bundleJS;
 exports.imageOptimizer = imageOptimizer;
+exports.videoOptimizer = videoCopy;
 exports.localServer = localServer;
 exports.clearCache = clearCache;
 exports.watchTask = watchTask;
 exports.default = series(
-    parallel(htmlMinify, compileSCSS, buildCSS, bundleJS, imageOptimizer),
+    parallel(htmlMinify, compileSCSS, buildCSS, bundleJS),
     clearCache,
     localServer,
     watchTask
 );
+exports.build = series(parallel(htmlMinify, buildCSS, bundleJS, imageOptimizer, videoCopy));

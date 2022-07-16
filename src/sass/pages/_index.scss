@@ -33,12 +33,20 @@
     }
 }
 
+.section-about {
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(img/professional-section-bg.webp);
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 5rem 1rem 0 1rem;
+}
+
 .section-professional {
     width: 100%;
     background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(img/professional-section-bg.webp);
     background-size: cover;
     background-position: 50% 50%;
-    padding: 5rem 1rem;
+    padding: 1rem;
 }
 
 .about {
@@ -47,9 +55,7 @@
     flex-direction: column;
     justify-content: center;
     background-color: var(--color-secondary-dark);
-    padding: 2rem;
-    margin:0 0 5rem 0;
-
+    padding: 3rem 2rem;
 
     &__image-box {
         display: flex;
@@ -99,27 +105,26 @@
     transition: all 2s;
 
     &__box {
-        width: 100%;
         padding: 1rem;
 
         &--70 {
-            width: 70%;
-        }
-
-        &--75 {
-            width: 75%;
-        }
-
-        &--80 {
             width: 80%;
         }
 
-        &--85 {
+        &--75 {
             width: 85%;
         }
 
-        &--95 {
+        &--80 {
+            width: 90%;
+        }
+
+        &--85 {
             width: 95%;
+        }
+
+        &--95 {
+            width: 105%;
         }
     }
 
@@ -148,5 +153,17 @@
 
     &__bar.active  ~ &__percent {
         opacity: 1;
+    }
+}
+
+.video-games-slider {
+    position: relative;
+
+    &__video {
+        width: 100%;
+        height: auto;
+        max-height: 50rem;
+        object-fit: cover;
+        object-position: center;
     }
 }

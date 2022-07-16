@@ -108,7 +108,7 @@ body {
   align-items: center;
   font-size: inherit;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin: 3rem 0;
 }
 .section-title__header span {
   font-size: 3.5rem;
@@ -311,6 +311,77 @@ body {
   pointer-events: auto;
 }
 
+:root {
+  --swiper-navigation-size: 44px;
+  /*
+  --swiper-navigation-color: var(--swiper-theme-color);
+  */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - var(--swiper-navigation-size) / 2);
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--swiper-navigation-color, var(--swiper-theme-color));
+}
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  opacity: 0.35;
+  cursor: auto;
+  pointer-events: none;
+}
+.swiper-button-prev.swiper-button-hidden,
+.swiper-button-next.swiper-button-hidden {
+  opacity: 0;
+  cursor: auto;
+  pointer-events: none;
+}
+.swiper-navigation-disabled .swiper-button-prev,
+.swiper-navigation-disabled .swiper-button-next {
+  display: none !important;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-family: swiper-icons;
+  font-size: var(--swiper-navigation-size);
+  text-transform: none !important;
+  letter-spacing: 0;
+  font-variant: initial;
+  line-height: 1;
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: 10px;
+  right: auto;
+}
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: "prev";
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: 10px;
+  left: auto;
+}
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: "next";
+}
+
+.swiper-button-lock {
+  display: none;
+}
+
 .header {
   width: 100%;
   background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
@@ -465,12 +536,20 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/shadow-warrior-3-small.webp);
 }
 
+.section-about {
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/professional-section-bg.webp);
+  background-size: cover;
+  background-position: 50% 50%;
+  padding: 5rem 1rem 0 1rem;
+}
+
 .section-professional {
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/professional-section-bg.webp);
   background-size: cover;
   background-position: 50% 50%;
-  padding: 5rem 1rem;
+  padding: 1rem;
 }
 
 .about {
@@ -479,8 +558,7 @@ body {
   flex-direction: column;
   justify-content: center;
   background-color: var(--color-secondary-dark);
-  padding: 2rem;
-  margin: 0 0 5rem 0;
+  padding: 3rem 2rem;
 }
 .about__image-box {
   display: flex;
@@ -525,23 +603,22 @@ body {
   transition: all 2s;
 }
 .skills__box {
-  width: 100%;
   padding: 1rem;
 }
 .skills__box--70 {
-  width: 70%;
-}
-.skills__box--75 {
-  width: 75%;
-}
-.skills__box--80 {
   width: 80%;
 }
-.skills__box--85 {
+.skills__box--75 {
   width: 85%;
 }
-.skills__box--95 {
+.skills__box--80 {
+  width: 90%;
+}
+.skills__box--85 {
   width: 95%;
+}
+.skills__box--95 {
+  width: 105%;
 }
 .skills__name {
   font-size: inherit;
@@ -564,5 +641,16 @@ body {
 }
 .skills__bar.active ~ .skills__percent {
   opacity: 1;
+}
+
+.video-games-slider {
+  position: relative;
+}
+.video-games-slider__video {
+  width: 100%;
+  height: auto;
+  max-height: 50rem;
+  object-fit: cover;
+  object-position: center;
 }
 /*# sourceMappingURL=main.css.map */
