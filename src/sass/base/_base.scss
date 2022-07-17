@@ -26,6 +26,8 @@
 html {
     box-sizing: border-box;
     font-size: 50%;
+    overflow-x: hidden;
+    animation: showIn 3s;
 }
 
 body {
@@ -35,4 +37,5 @@ body {
     color: var(--color-white);
     position: relative;
     overflow-x: hidden;
+    box-sizing: inherit;
 }

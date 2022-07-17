@@ -1,52 +1,9 @@
-.section-intro {
-    width: 100%;
-}
-
-.intro-slider {
-    &__swiper-slide {
-        display: flex;
-        padding-top: 120%;
-        background-size: cover;
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        background-color: rgba(0,0,0,.3);
-
-        &--1 {
-            background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)) ,url(img/evil-west-small.webp);          
-        }
-
-        &--2 {
-            background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)) ,url(img/lords-of-the-fallen-small.webp);
-        }
-
-        &--3 {
-            background-image:url(img/sniper-ghost-warrior-3-small.webp);
-        }
-
-        &--4 {
-            background-image:url(img/sniper-ghost-warrior-contracts-small.webp);
-        }
-
-        &--5 {
-            background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)) ,url(img/shadow-warrior-3-small.webp);
-        }
-    }
-}
-
-.section-about {
-    width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(img/professional-section-bg.webp);
-    background-size: cover;
-    background-position: 50% 50%;
-    padding: 5rem 1rem 0 1rem;
-}
-
 .section-professional {
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(img/professional-section-bg.webp);
+    background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(img/about-bg-small.webp);
     background-size: cover;
     background-position: 50% 50%;
-    padding: 1rem;
+    padding: 3rem 1rem;
 }
 
 .about {
@@ -58,15 +15,16 @@
     padding: 3rem 2rem;
 
     &__image-box {
-        display: flex;
+        display: none;
         justify-content: center;
         margin: 2rem 0 4rem 0;
     }
 
     &__image {
-        width: 90%;
-        max-height: 26rem;
+        width: 82%;
+        max-height: 23.8rem;
         border-radius: 50%;
+        border: 3px solid var(--color-primary-dark);
     }
 
     &__content {
@@ -86,7 +44,7 @@
     &::before {
         content: "\201C";
         position: absolute;
-        top: 34rem;
+        top: 0;
         left: 0;
         line-height: 1;
         font-size: 20rem;
@@ -156,8 +114,21 @@
     }
 }
 
+.section-video-games {
+    width: 100%;
+    background-color: var(--color-black);
+    background-size: cover;
+    background-position: 50% 50%;
+
+    min-height: 50rem;
+}
+
 .video-games-slider {
     position: relative;
+
+    &__swiper-slide {
+        font-size: 0;
+    }
 
     &__video {
         width: 100%;
@@ -165,5 +136,48 @@
         max-height: 50rem;
         object-fit: cover;
         object-position: center;
+    }
+
+    &__navigation {
+        position: absolute;
+        top: 85%;
+        color: var(--color-black);
+        --swiper-navigation-size: 3rem;
+        background-color: var(--color-white);
+        height: 25px;
+        width: 25px;
+        border: 1px solid var(--color-black);
+        border-radius: 50%;
+
+        &::after {
+            font-size: 15px;
+        }
+    }
+
+    &__title-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 96%;
+        background-color: rgba(128,128,128,.6);
+        // border-top: 2px solid var(--color-secondary);
+        // border-bottom: 2px solid var(--color-secondary);
+        border: 2px solid var(--color-secondary);;
+        padding: .5rem;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        font-weight: 500;
+        color: var(--color-white);
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+    &__role {
+        font-size: 2rem;
+        color: var(--color-secondary);
+        margin-bottom: .5rem;
     }
 }

@@ -1,5 +1,9 @@
 .header {
-    width: 100%;
-    background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
-    padding: 1rem 0;
+    display: flex;
+    justify-content: flex-end;
+    background-image: url(img/header-image-small.webp);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    padding-top: 45%;
 }

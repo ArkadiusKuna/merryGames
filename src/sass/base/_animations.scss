@@ -23,3 +23,25 @@
     width: 100%;
   }
 }
+
+@keyframes showIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    transform: translateX(10rem);
+  }
+  50% {
+    transform: translateX(-2rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
