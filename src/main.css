@@ -77,7 +77,7 @@ body {
   color: var(--color-white);
   position: relative;
   overflow-x: hidden;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 .paragraph {
@@ -625,37 +625,40 @@ body {
 }
 .video-games-slider__navigation {
   position: absolute;
-  top: 85%;
+  top: 88%;
   color: var(--color-black);
   --swiper-navigation-size: 3rem;
   background-color: var(--color-white);
-  height: 25px;
-  width: 25px;
+  height: 22px;
+  width: 22px;
   border: 1px solid var(--color-black);
   border-radius: 50%;
 }
 .video-games-slider__navigation::after {
-  font-size: 15px;
+  font-size: 13px;
 }
 .video-games-slider__title-box {
+  max-height: 7rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 96%;
   background-color: rgba(128, 128, 128, 0.6);
-  border: 2px solid var(--color-secondary);
-  padding: 0.5rem;
+  border-top: 2px solid var(--color-secondary);
+  border-bottom: 2px solid var(--color-secondary);
+  padding: 0.8rem;
 }
 .video-games-slider__title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 500;
   color: var(--color-white);
   letter-spacing: 3px;
   text-transform: uppercase;
+  text-align: center;
 }
 .video-games-slider__role {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--color-secondary);
   margin-bottom: 0.5rem;
 }
