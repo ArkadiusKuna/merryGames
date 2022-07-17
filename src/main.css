@@ -643,17 +643,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 96%;
+  width: 95%;
   background-color: rgba(128, 128, 128, 0.6);
   border-top: 2px solid var(--color-secondary);
   border-bottom: 2px solid var(--color-secondary);
   padding: 0.8rem;
 }
 .video-games-slider__title {
-  font-size: 2rem;
+  font-size: 1.9rem;
   font-weight: 500;
   color: var(--color-white);
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
 }
