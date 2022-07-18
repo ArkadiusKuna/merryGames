@@ -6,17 +6,16 @@
     background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(img/about-bg-small.webp);
     background-size: cover;
     background-position: 50% 50%;
-    padding: 3rem 1rem;
+    padding: 3rem 0rem;
 }
 
 .about {
-    width: 95%;
+    width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: var(--color-secondary-dark);
-    // background-image: linear-gradient(to top, var(--color-secondary-light), var(--color-secondary-dark));
     padding: 3rem 2rem;
     box-shadow: 0 3rem 3rem rgba(0,0,0,.5);
 
@@ -61,7 +60,7 @@
 }
 
 .skills {
-    width: 95%;
+    width: 98%;
     align-self: flex-start;
     font-size: 1.7rem;
     font-weight: 300;
@@ -193,7 +192,7 @@
 
 .section-tabletop {
     width: 100%;
-    background-image: linear-gradient(rgba(15,25,52,.5), rgba(15,25,52,.5)), url(img/tabletop-bg-small.webp);
+    background-color: var(--color-black);
     background-size: cover;
     background-position: 50% 50%;
     display: flex;

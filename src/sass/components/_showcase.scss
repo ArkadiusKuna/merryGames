@@ -1,7 +1,7 @@
 .showcase {
     position: relative;
         width: 95%;
-        background-image: linear-gradient(to bottom, var(--color-primary-dark), var(--color-primary-light));
+        background-color: var(--color-black);
         box-shadow: 0 3rem 3rem rgba(0,0,0,.5);
         padding: 2rem 1rem;
 
@@ -30,6 +30,6 @@
     }
 
     &__image {
-        width: 32%;
+        width: 48%;
     }
 }
