@@ -97,7 +97,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 .section-title__header {
   display: flex;
@@ -502,8 +502,42 @@ body {
   animation: moveInRight 2s;
 }
 
+.showcase {
+  position: relative;
+  width: 95%;
+  background-image: linear-gradient(to bottom, var(--color-primary-dark), var(--color-primary-light));
+  box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+  padding: 2rem 1rem;
+}
+.showcase__title-box {
+  margin: 4rem;
+}
+.showcase__title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.showcase__sub-title {
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+  color: var(--color-secondary);
+}
+.showcase__image-box {
+  display: flex;
+  justify-content: space-between;
+}
+.showcase__image {
+  width: 32%;
+}
+
 .section-professional {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/about-bg-small.webp);
   background-size: cover;
   background-position: 50% 50%;
@@ -511,12 +545,14 @@ body {
 }
 
 .about {
+  width: 95%;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: var(--color-secondary-dark);
   padding: 3rem 2rem;
+  box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
 }
 .about__image-box {
   display: none;
@@ -547,13 +583,15 @@ body {
   top: 0;
   left: 0;
   line-height: 1;
-  font-size: 20rem;
+  font-size: 15rem;
   color: var(--color-secondary-light);
   font-family: sans-serif;
   overflow: hidden;
 }
 
 .skills {
+  width: 95%;
+  align-self: flex-start;
   font-size: 1.7rem;
   font-weight: 300;
   text-transform: uppercase;
@@ -607,11 +645,11 @@ body {
   background-color: var(--color-black);
   background-size: cover;
   background-position: 50% 50%;
-  min-height: 50rem;
 }
 
 .video-games-slider {
   position: relative;
+  margin-bottom: -1.5rem;
 }
 .video-games-slider__swiper-slide {
   font-size: 0;
@@ -644,7 +682,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 95%;
-  background-color: rgba(128, 128, 128, 0.6);
+  background-color: rgba(48, 85, 186, 0.9);
   border-top: 2px solid var(--color-secondary);
   border-bottom: 2px solid var(--color-secondary);
   padding: 0.8rem;
@@ -661,5 +699,16 @@ body {
   font-size: 1.5rem;
   color: var(--color-secondary);
   margin-bottom: 0.5rem;
+}
+
+.section-tabletop {
+  width: 100%;
+  background-image: linear-gradient(rgba(15, 25, 52, 0.5), rgba(15, 25, 52, 0.5)), url(img/tabletop-bg-small.webp);
+  background-size: cover;
+  background-position: 50% 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 50rem;
 }
 /*# sourceMappingURL=main.css.map */

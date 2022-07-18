@@ -1,0 +1,35 @@
+.showcase {
+    position: relative;
+        width: 95%;
+        background-image: linear-gradient(to bottom, var(--color-primary-dark), var(--color-primary-light));
+        box-shadow: 0 3rem 3rem rgba(0,0,0,.5);
+        padding: 2rem 1rem;
+
+    &__title-box {
+        margin: 4rem;
+    }
+
+    &__title {
+        font-size: 3rem;
+        font-weight:700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__sub-title {
+        font-size: 2rem;
+        font-weight: 300;
+        text-align: center;
+        color: var(--color-secondary);
+    }
+
+    &__image-box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__image {
+        width: 32%;
+    }
+}
