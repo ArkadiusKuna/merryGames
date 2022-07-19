@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(img/about-bg-small.webp);
+    background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(img/about/about-bg-small.webp);
     background-size: cover;
     background-position: 50% 50%;
     padding: 0 0 3rem 0;
@@ -15,8 +15,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(170, 51, 0,.7);
-    padding: 3rem 2rem;
+    // background-color: var(--color-secondary-dark);
+    background-color: rgba(255, 94, 0,.7);
+    padding: 3rem 1rem;
 
     &__image-box {
         display: none;
@@ -153,9 +154,7 @@
         justify-content: center;
         align-items: center;
         width: 95%;
-        background-color: rgba(170, 51, 0,.9);
-        border-top: 2px solid var(--color-secondary);
-        border-bottom: 2px solid var(--color-secondary);
+        background-color: rgba(255, 94, 0,.9);
         padding: .8rem;
     }
 
@@ -185,7 +184,7 @@
 
 .section-workshops {
     width: 100%;
-    background-image: url(img/workshops-bg-small.webp);
+    background-image: url(img/workshops/workshops-bg-small.webp);
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -195,7 +194,7 @@
 }
 
 .workshop {
-    background-color: rgba(170, 51, 0,.7);
+    background-color: rgba(255, 94, 0,.7);
     padding: 0 1rem;
 
     &__composition {
@@ -227,6 +226,26 @@
     }
 
     &__list {
+        font-size: 1.7rem;
+        list-style: none;
+        margin-bottom: 3rem;
+    }
 
+    &__list-item {
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        padding: .8rem 0;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            height: 2rem;
+            width: 2rem;
+            margin-right: 0.9rem;
+            background-image: url(img/svg/gamepad.svg);
+            background-size: cover;
+            transform: rotate(-45deg);
+        }
     }
 }

@@ -22,7 +22,7 @@ const config = {
             allSCSS: "src/sass/**/*.scss",
             scss: "src/sass/main.scss",
             js: "src/scripts/*.js",
-            img: "src/img/*.+(png|jpg|jpeg|svg)",
+            img: "src/img/**/*.+(png|jpg|jpeg|svg)",
             video: 'src/video/*.+(mp4|webm)',
         },
         dist: {
