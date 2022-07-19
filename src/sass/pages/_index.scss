@@ -6,7 +6,7 @@
     background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(img/about/about-bg-small.webp);
     background-size: cover;
     background-position: 50% 50%;
-    padding: 0 0 3rem 0;
+    padding: 0 1rem 3rem 1rem;
 }
 
 .about {
@@ -15,7 +15,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // background-color: var(--color-secondary-dark);
     background-color: rgba(255, 94, 0,.7);
     padding: 3rem 1rem;
 
@@ -38,8 +37,8 @@
 
     &__title {
         font-size: 3rem;
-        font-weight: 300;
-        color: var(--color-secondary-light);
+        font-weight: 400;
+        color: #fff;
         letter-spacing: 2px;
         text-transform: uppercase;
         text-align: center;
@@ -195,7 +194,7 @@
 
 .workshop {
     background-color: rgba(255, 94, 0,.7);
-    padding: 0 1rem;
+    padding: 0 2rem;
 
     &__composition {
         position: relative;

@@ -83,7 +83,6 @@ body {
 
 .paragraph {
   font-size: 1.7rem;
-  font-weight: 300;
   color: var(--color-white);
 }
 .paragraph:not(:last-child) {
@@ -104,6 +103,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  letter-spacing: 4px;
   font-size: inherit;
   font-weight: bold;
   margin: 3rem 0;
@@ -520,7 +520,7 @@ body {
 .showcase__title {
   font-size: 2.5rem;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 2rem;
@@ -549,6 +549,25 @@ body {
   margin-bottom: 0;
 }
 
+.btn {
+  display: flex;
+  justify-content: center;
+}
+.btn__link:link, .btn__link:visited {
+  display: inline-block;
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--color-white);
+  text-decoration: none;
+  border-bottom: 2px solid currentColor;
+  padding-bottom: 0.5rem;
+  margin-bottom: 3rem;
+}
+.btn__link:link span, .btn__link:visited span {
+  margin-left: 0.5rem;
+}
+
 .section-professional {
   width: 100%;
   display: flex;
@@ -557,7 +576,7 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/about/about-bg-small.webp);
   background-size: cover;
   background-position: 50% 50%;
-  padding: 0 0 3rem 0;
+  padding: 0 1rem 3rem 1rem;
 }
 
 .about {
@@ -585,8 +604,8 @@ body {
 }
 .about__title {
   font-size: 3rem;
-  font-weight: 300;
-  color: var(--color-secondary-light);
+  font-weight: 400;
+  color: #fff;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
@@ -722,7 +741,7 @@ body {
 
 .workshop {
   background-color: rgba(255, 94, 0, 0.7);
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 .workshop__composition {
   position: relative;
