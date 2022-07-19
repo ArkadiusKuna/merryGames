@@ -10,8 +10,6 @@
 
     --color-black: #000;
     --color-white: #fff;
-
-    --margin-y-3: 3rem;
 }
 
 * {
@@ -30,6 +28,7 @@ html {
     font-size: 50%;
     overflow-x: hidden;
     animation: showIn 3s;
+    text-size-adjust: auto;
 }
 
 body {

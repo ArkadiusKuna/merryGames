@@ -1,12 +1,11 @@
 .showcase {
     position: relative;
         width: 95%;
-        // background-color: var(--color-black);
-                background-color: rgba(0,0,0,.1);
+        background-color: var(--color-black);
         padding: 2rem 1rem;
 
     &__title-box {
-        margin: var(--margin-y-3) 0;
+        margin: 3rem 0;
     }
 
     &__title {
@@ -37,6 +36,10 @@
         width: 48%;
         height: auto;
         margin-bottom: 5px;
+
+        &--last {
+            margin-bottom: 5px !important;
+        }
 
         &:last-of-type {
             margin-bottom: 0;
