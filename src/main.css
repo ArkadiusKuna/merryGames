@@ -49,6 +49,7 @@
   --color-grey-dark-1: #a9a9a9;
   --color-black: #000;
   --color-white: #fff;
+  --margin-y-3: 3rem;
 }
 
 * {
@@ -85,7 +86,7 @@ body {
   color: var(--color-white);
 }
 .paragraph:not(:last-child) {
-  margin-bottom: 5rem;
+  margin-bottom: var(--margin-y-3);
 }
 
 .section-title {
@@ -96,15 +97,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: var(--margin-y-3);
 }
 .section-title__header {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: inherit;
-  font-weight: 700;
-  margin: 3rem 0;
+  font-weight: bold;
+  margin: var(--margin-y-3) 0;
 }
 .section-title__description {
   font-size: 2rem;
@@ -508,19 +509,19 @@ body {
 .showcase {
   position: relative;
   width: 95%;
-  background-color: var(--color-black);
-  box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.1);
   padding: 2rem 1rem;
 }
 .showcase__title-box {
-  margin: 4rem;
+  margin: var(--margin-y-3) 0;
 }
 .showcase__title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 2rem;
 }
 .showcase__sub-title {
   font-size: 2rem;
@@ -562,7 +563,6 @@ body {
   justify-content: center;
   background-color: var(--color-secondary-dark);
   padding: 3rem 2rem;
-  box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
 }
 .about__image-box {
   display: none;
@@ -585,21 +585,21 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: var(--margin-y-3);
 }
 
 .skills {
-  width: 98%;
+  width: 95%;
   align-self: flex-start;
   font-size: 1.7rem;
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding: 1rem;
+  padding: 2rem 1rem;
   transition: all 2s;
 }
 .skills__box {
-  padding: 1rem;
+  padding: 1rem 0;
 }
 .skills__box--70 {
   width: 80%;
@@ -644,11 +644,11 @@ body {
   background-color: var(--color-black);
   background-size: cover;
   background-position: 50% 50%;
+  margin-bottom: -0.1rem;
 }
 
 .video-games-slider {
   position: relative;
-  margin-bottom: -1.5rem;
 }
 .video-games-slider__swiper-slide {
   font-size: 0;

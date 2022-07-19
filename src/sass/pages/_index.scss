@@ -17,7 +17,6 @@
     justify-content: center;
     background-color: var(--color-secondary-dark);
     padding: 3rem 2rem;
-    box-shadow: 0 3rem 3rem rgba(0,0,0,.5);
 
     &__image-box {
         display: none;
@@ -43,22 +42,22 @@
         letter-spacing: 2px;
         text-transform: uppercase;
         text-align: center;
-        margin-bottom: 4rem;
+        margin-bottom: var(--margin-y-3);
     }
 }
 
 .skills {
-    width: 98%;
+    width: 95%;
     align-self: flex-start;
     font-size: 1.7rem;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 1rem;
+    padding: 2rem 1rem;
     transition: all 2s;
 
     &__box {
-        padding: 1rem;
+        padding: 1rem 0;
 
         &--70 {
             width: 80%;
@@ -114,12 +113,12 @@
     background-color: var(--color-black);
     background-size: cover;
     background-position: 50% 50%;
+    margin-bottom: -0.1rem;
+
 }
 
 .video-games-slider {
     position: relative;
-    margin-bottom: -1.5rem;
-
 
     &__swiper-slide {
         font-size: 0;
