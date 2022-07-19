@@ -576,7 +576,7 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/about/about-bg-small.webp);
   background-size: cover;
   background-position: 50% 50%;
-  padding: 0 1rem 3rem 1rem;
+  padding: 0 0 3rem 0;
 }
 
 .about {
@@ -619,7 +619,7 @@ body {
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 2rem 2rem;
   transition: all 2s;
 }
 .skills__box {
@@ -785,6 +785,7 @@ body {
   margin-right: 0.9rem;
   background-image: url(img/svg/gamepad.svg);
   background-size: cover;
-  transform: rotate(-45deg);
+  background-position: 60%;
+  transform: rotate(-30deg);
 }
 /*# sourceMappingURL=main.css.map */
