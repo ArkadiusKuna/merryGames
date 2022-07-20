@@ -18,8 +18,12 @@
 
     --gradient-black-30: rgba(0,0,0,.3);
     --gradient-secondary-70: rgba(255,224,102,.7);
-    --gradient-secondary-light-80: rgba(255, 254, 36,.8);
+    --gradient-secondary-light-80: #fffe24cc;
     --gradient-secondary-90: rgba(255,224,102,.9);
+
+    --default-font-paragraph: 2rem;
+    --default-font-header: 2.5rem;
+    --default-font-sub-header: 2.2rem;
 }
 
 * {

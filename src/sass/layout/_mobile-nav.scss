@@ -76,6 +76,10 @@
         margin-right: .9rem;
         display: inline-block;
       }
+
+      &:target &__checkbox:not(:checked) ~ &__background {
+        transform: scale(1);
+      }
     }  
 
     // &:hover,

@@ -10,7 +10,7 @@ const elementInView = (el) => {
 };
 
 const displayScrollElement = (element) => {
-    element.classList.add("active");
+    element.classList.add("bar-active");
 };
 
 const handleScrollAnimation = () => {

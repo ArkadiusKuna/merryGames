@@ -1,6 +1,7 @@
 .paragraph {
-    font-size: 1.7rem;
+    font-size: var(--default-font-paragraph);
     color: var(--color-black);
+    hyphens: auto;
 
     &--white {
         color: var(--color-white);
@@ -12,7 +13,6 @@
 }
 
 .section-title {
-    font-size: 3rem;
     letter-spacing: 3px;
     color: var(--color-white);
     text-transform: uppercase;
@@ -22,17 +22,17 @@
     margin-bottom: 3rem;
 
     &__header {
+        font-size: var(--default-font-header);
         display: flex;
         flex-direction: column;
         align-items: center;
         letter-spacing: 4px;
-        font-size: inherit;
         font-weight: bold;
         margin: 3rem 0;
     }
 
     &__description {
-        font-size: 2rem;
+        font-size: var(--default-font-sub-header);
         font-weight: 300;
         text-align: center;
     }
