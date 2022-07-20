@@ -17,25 +17,25 @@
     <div class="mobile-nav">
 
         <input type="checkbox" class="mobile-nav__checkbox" id="navi-toggle">
-        <label for="navi-toggle" class="mobile-nav__button">
+        <label for="navi-toggle" class="mobile-nav__button" id="naviBtn">
             <span class="mobile-nav__icon">&nbsp;</span>
         </label>
         <div class="mobile-nav__background">&nbsp;</div>
         <nav class="mobile-nav__navigation">
             <ul class="mobile-nav__list">
-                <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Home</a></li>
-                <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Professional</a></li>
-                <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Video games</a></li>
-                <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Tabletop games</a></li>
-                <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Workshops</a></li>
-                <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">media</a></li>
-                <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Achievments</a></li>
-                <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Contact</a></li>
+                <li class="mobile-nav__item"><a href="#home" class="mobile-nav__link">Home</a></li>
+                <li class="mobile-nav__item"><a href="#professional" class="mobile-nav__link">Professional</a></li>
+                <li class="mobile-nav__item"><a href="#video-games" class="mobile-nav__link">Video games</a></li>
+                <li class="mobile-nav__item"><a href="#tabletop-games" class="mobile-nav__link">Tabletop games</a></li>
+                <li class="mobile-nav__item"><a href="#workshops" class="mobile-nav__link">Workshops</a></li>
+                <li class="mobile-nav__item"><a href="#media" class="mobile-nav__link">media</a></li>
+                <li class="mobile-nav__item"><a href="#achievments" class="mobile-nav__link">Achievments</a></li>
+                <li class="mobile-nav__item"><a href="#contact" class="mobile-nav__link">Contact</a></li>
             </ul>
         </nav>
     </div>
 
-    <header class="header">
+    <header class="header" id="home">
         <picture class="logo">
             <source media="(max-width: 47.5em)" srcset="img/logo/logo-small-1x.webp 1x, img/logo/logo-small-2x.webp 2x">
             <img srcset="img/logo/logo-small-1x.png 1x, img/logo/logo-small-2x.png 2x" alt="Logo Merry Tale Games" src="img/logo/logo-small.png" class="logo__image">
@@ -44,7 +44,7 @@
 
     <main>
 
-        <section class="section-professional">
+        <section class="section-professional" id="professional">
 
             <div class="about">
                 <div class="about__image-box">
@@ -56,10 +56,12 @@
                         About me
                     </h3>
                     <p class="paragraph">
-                        Hi! I’m a writer and narrative designer currently working at Flying Wild Hog game studio. Since early childhood I’ve
-                        been exploring and creating fictional settings in various games, be it tabletop RPG or video games. I’ve grown up on
-                        Call of Cthulhu and DnD, started my career as an RPG writer, then moved forward to the game industry. And so far, so
-                        good! ;)
+                        Hi! I’m a storyteller with a knack for rhetoric and acting. I’m currently working as a writer and narrative designer at
+                        Flying Wild Hog game studio. Since early childhood I’ve been exploring and creating fictional settings in various games,
+                        be it the tabletop RPG or video games. I’ve grown up on Call of Cthulhu and DnD, started my career as an RPG writer,
+                        then moved forward to the game industry. Writing and designing the narrative have become my forte. In my free time I
+                        practise boxing and do amateur theatre. Other than that I host a radio program covering the topic of music in games. And
+                        so far, so good! ;)
 
                     </p>
                 </div>
@@ -147,7 +149,7 @@
             </div>
         </section>
 
-        <section class="section-video-games">
+        <section class="section-video-games" id="video-games">
 
             <div class="section-title">
                 <h2 class="section-title__header">
@@ -225,7 +227,7 @@
             </div>
         </section>
 
-        <section class="section-tabletop">
+        <section class="section-tabletop" id="tabletop-games">
 
             <div class="section-title">
                 <h2 class="section-title__header">
@@ -245,7 +247,7 @@
                         7th edition PL
                     </h4>
                 </div>
-                <p class="paragraph">
+                <p class="paragraph paragraph--white">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae reprehenderit modi ipsum animi iste quam excepturi! Mollitia expedita quis quos maiores eaque omnis magnam magni, reiciendis assumenda pariatur ab iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 </p>
                 <div class="showcase__image-box">
@@ -270,7 +272,7 @@
                         Other Tabletop RPG projects
                     </h4>
                 </div>
-                <p class="paragraph">
+                <p class="paragraph paragraph--white">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae reprehenderit modi ipsum animi iste quam
                     excepturi! Mollitia expedita quis quos maiores eaque omnis magnam magni, reiciendis assumenda pariatur ab iure.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -286,7 +288,7 @@
             </div>
         </section>
 
-        <section class="section-workshops">
+        <section class="section-workshops" id="workshops">
 
             <div class="section-title">
                 <h2 class="section-title__header">
@@ -325,6 +327,15 @@
                 <div class="btn">
                     <a href="#" class="btn__link">Contact me<span>&rarr;</span></a>
                 </div>
+            </div>
+        </section>
+
+        <section class="section-media" id="media">
+
+            <div class="section-title">
+                <h2 class="section-title__header">
+                    Media
+                </h2>
             </div>
 
         </section>

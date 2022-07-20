@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url(img/about/about-bg-small.webp);
+    background-image: linear-gradient(var(--gradient-black-30), var(--gradient-black-30)), url(img/about/about-bg-small.webp);
     background-size: cover;
     background-position: 50% 50%;
     padding: 0 0 3rem 0;
@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(255, 94, 0,.7);
+    background-color: var(--gradient-secondary-light-80);
     padding: 3rem 1rem;
 
     &__image-box {
@@ -38,7 +38,7 @@
     &__title {
         font-size: 3rem;
         font-weight: 400;
-        color: #fff;
+        color: var(--color-black);
         letter-spacing: 2px;
         text-transform: uppercase;
         text-align: center;
@@ -82,6 +82,7 @@
 
     &__name {
         font-size: inherit;
+        color: var(--color-white);
     }
 
     &__progress {
@@ -91,13 +92,14 @@
 
     &__bar {
         width: 100%;
-        background-image: linear-gradient(to left, rgb(256,166,128), rgb(170,51,0));
+        background-image: linear-gradient(to left, var(--color-secondary-light), var(--color-tertiary) 95%);
         height: 12px;
         display: inline-block;
     }
 
     &__percent {
         font-weight: 400;
+        color: var(--color-white);
         opacity: 0;
         transition: opacity 2s;
         margin-left: 1.3rem;
@@ -153,7 +155,7 @@
         justify-content: center;
         align-items: center;
         width: 95%;
-        background-color: rgba(255, 94, 0,.9);
+        background-color: var(--gradient-secondary-light-80);
         padding: .8rem;
     }
 
@@ -181,6 +183,56 @@
     align-items: center;
 }
 
+.showcase {
+    position: relative;
+        width: 95%;
+        background-color: var(--color-black);
+        padding: 2rem 1rem;
+
+    &__title-box {
+        margin-bottom: 3rem ;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        font-weight:700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--color-white);
+        margin-bottom: 2rem;
+
+    }
+
+    &__sub-title {
+        font-size: 2rem;
+        font-weight: 300;
+        text-align: center;
+        color: var(--color-secondary-light);
+    }
+
+    &__image-box {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__image {
+        width: 48%;
+        height: auto;
+        margin-bottom: 5px;
+
+        &--last {
+            margin-bottom: 5px !important;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
 .section-workshops {
     width: 100%;
     background-image: url(img/workshops/workshops-bg-small.webp);
@@ -193,7 +245,7 @@
 }
 
 .workshop {
-    background-color: rgba(255, 94, 0,.7);
+    background-color: var(--gradient-secondary-light-80);
     padding: 0 2rem;
 
     &__composition {
