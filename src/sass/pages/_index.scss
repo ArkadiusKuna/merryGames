@@ -165,8 +165,8 @@
 
     &__title {
         font-size: var(--default-font-paragraph);
-        font-weight: 500;
-        color: var(--color-white);
+        font-weight: 600;
+        color: var(--color-black);
         letter-spacing: 2px;
         text-transform: uppercase;
         text-align: center;
@@ -174,7 +174,7 @@
 
     &__role {
         font-size: var(--default-font-paragraph);
-        color: var(--color-white);
+        color: var(--color-black);
     }
 }
 
@@ -253,7 +253,7 @@
 
     &__composition {
         position: relative;
-        height: 19rem;
+        height: 21rem;
         display: flex;
         justify-content: center;
         transform: scale(1.1);
@@ -287,8 +287,6 @@
 
     &__list-item {
         font-size: var(--default-font-paragraph);
-        align-items: center;
-        flex: 0 0 50%;
         margin-bottom: 0.7rem;
         padding: .8rem 0;
 
