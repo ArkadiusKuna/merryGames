@@ -1,7 +1,7 @@
 .paragraph {
     font-size: var(--default-font-paragraph);
     color: var(--color-black);
-    hyphens: auto;
+    word-break: keep-all;
 
     &--white {
         color: var(--color-white);

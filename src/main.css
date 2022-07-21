@@ -90,7 +90,7 @@ body {
 .paragraph {
   font-size: var(--default-font-paragraph);
   color: var(--color-black);
-  hyphens: auto;
+  word-break: keep-all;
 }
 .paragraph--white {
   color: var(--color-white);
@@ -423,7 +423,7 @@ body {
   position: fixed;
   top: 3.5rem;
   right: 1.5rem;
-  background-image: radial-gradient(var(--color-primary-light), var(--color-primary-light));
+  background-color: var(--color-primary-dark);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 }
@@ -804,5 +804,16 @@ body {
   background-size: cover;
   background-position: 60%;
   transform: rotate(-30deg);
+}
+
+.section-achievements {
+  width: 100%;
+  background-image: url(img/achievements/achievements-bg-small.webp);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  min-height: 100rem;
 }
 /*# sourceMappingURL=main.css.map */
