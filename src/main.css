@@ -81,25 +81,25 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  color: var(--color-black);
+  color: var(--color-white);
   position: relative;
   overflow-x: hidden;
   box-sizing: border-box;
 }
 
 .paragraph {
+  position: relative;
   font-size: var(--default-font-paragraph);
-  color: var(--color-black);
-  word-break: keep-all;
-}
-.paragraph--white {
+  font-weight: 300;
   color: var(--color-white);
+  word-break: keep-all;
 }
 .paragraph:not(:last-child) {
   margin-bottom: 3rem;
 }
 
 .section-title {
+  position: relative;
   letter-spacing: 3px;
   color: var(--color-white);
   text-transform: uppercase;
@@ -530,7 +530,7 @@ body {
   font-size: var(--default-font-paragraph);
   font-weight: 600;
   letter-spacing: 1px;
-  color: var(--color-black);
+  color: var(--color-white);
   text-decoration: none;
   border-bottom: 2px solid currentColor;
   padding-bottom: 0.5rem;
@@ -541,23 +541,33 @@ body {
 }
 
 .section-professional {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: linear-gradient(var(--gradient-black-30), var(--gradient-black-30)), url(img/about/about-bg-small.webp);
-  background-size: cover;
+  background-color: var(--color-primary-dark);
   background-position: 50% 50%;
   padding: 0 0 3rem 0;
 }
+.section-professional::before {
+  content: "";
+  position: absolute;
+  background-image: url(img/about/about-bg-small.webp);
+  background-size: cover;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
+}
 
 .about {
-  width: 100%;
   position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--gradient-secondary-light-80);
   padding: 3rem 2rem;
 }
 .about__image-box {
@@ -575,9 +585,10 @@ body {
   text-align: left;
 }
 .about__title {
+  position: relative;
   font-size: var(--default-font-header);
   font-weight: 400;
-  color: var(--color-black);
+  color: var(--color-white);
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
@@ -594,6 +605,7 @@ body {
   transition: all 2s;
 }
 .skills__box {
+  position: relative;
   padding: 1rem 0;
 }
 .skills__box--70 {
@@ -642,9 +654,21 @@ body {
 }
 
 .section-video-games {
+  position: relative;
   width: 100%;
-  background-color: var(--color-black);
+  background-color: var(--color-primary-dark);
   margin-bottom: -0.1rem;
+}
+.section-video-games::before {
+  content: "";
+  position: absolute;
+  background-image: url(img/video-games/video-games-bg-small.webp);
+  background-size: cover;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
 }
 
 .video-games-slider {
@@ -697,17 +721,28 @@ body {
 }
 
 .section-tabletop {
+  position: relative;
   width: 100%;
-  background-color: var(--color-black);
+  background-color: var(--color-primary-dark);
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.section-tabletop::before {
+  content: "";
+  position: absolute;
+  background-image: url(img/tabletop/tabletop-bg-small.webp);
+  background-size: cover;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
 }
 
 .showcase {
   position: relative;
   width: 95%;
-  background-color: var(--color-black);
   padding: 2rem 1rem;
 }
 .showcase__title-box {
@@ -747,18 +782,30 @@ body {
 }
 
 .section-workshops {
+  position: relative;
   width: 100%;
-  background-image: url(img/workshops/workshops-bg-small.webp);
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  background-color: var(--color-primary-dark);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.section-workshops::before {
+  position: absolute;
+  content: "";
+  background-image: url(img/workshops/workshops-bg-small.webp);
+  background-size: cover;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
+}
 
 .workshop {
-  background-color: var(--gradient-secondary-light-80);
+  position: relative;
   padding: 0 2rem;
 }
 .workshop__composition {
@@ -807,13 +854,24 @@ body {
 }
 
 .section-achievements {
+  position: relative;
   width: 100%;
+  background-color: var(--color-primary-dark);
+  display: flex;
+  flex-direction: column;
+  min-height: 100rem;
+}
+.section-achievements::before {
+  position: absolute;
+  content: "";
   background-image: url(img/achievements/achievements-bg-small.webp);
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  min-height: 100rem;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.3;
 }
 /*# sourceMappingURL=main.css.map */
