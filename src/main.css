@@ -74,7 +74,6 @@ html {
   font-size: 50%;
   overflow-x: hidden;
   animation: showIn 3s;
-  text-size-adjust: auto;
 }
 
 body {
@@ -513,7 +512,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  transform: translateX(3rem);
 }
 .logo__image {
   width: 90%;
@@ -547,19 +545,22 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: var(--color-primary-dark);
-  background-position: 50% 50%;
   padding: 0 0 3rem 0;
+  z-index: -1;
 }
 .section-professional::before {
+  position: fixed;
   content: "";
-  position: absolute;
-  background-image: url(img/about/about-bg-small.webp);
   background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
   opacity: 0.5;
+  background-image: url(img/about/about-bg-small.webp);
 }
 
 .about {
@@ -657,7 +658,6 @@ body {
   position: relative;
   width: 100%;
   background-color: var(--color-primary-dark);
-  margin-bottom: -0.1rem;
 }
 .section-video-games::before {
   content: "";
@@ -847,7 +847,7 @@ body {
   height: 2rem;
   width: 2rem;
   margin-right: 0.9rem;
-  background-image: url(img/svg/gamepad.svg);
+  background-image: url(img/svg/gamepad-w.svg);
   background-size: cover;
   background-position: 60%;
   transform: rotate(-30deg);
