@@ -5,6 +5,16 @@
     color: var(--color-white);
     word-break: keep-all;
 
+    &__link {
+        font-weight: bold;
+        color: var(--color-secondary-light);
+        letter-spacing: 1px;
+    }
+
+    &--bold {
+        font-weight: 600;
+    }
+
     &:not(:last-child) {
         margin-bottom: 3rem;
     }

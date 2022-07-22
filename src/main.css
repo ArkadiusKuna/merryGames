@@ -42,6 +42,7 @@
 }
 :root {
   --color-primary-dark: #0f1934;
+  --color-primary-dark-2: #1842b4;
   --color-primary-light: #3055ba;
   --color-secondary: #ffe066;
   --color-secondary-light: #ffe024;
@@ -49,13 +50,15 @@
   --color-tertiary: #ff5100;
   --color-black: #000;
   --color-white: #fff;
+  --color-grey-light: #737373;
   --gradient-black-30: rgba(0,0,0,.3);
   --gradient-secondary-70: rgba(255,224,102,.7);
   --gradient-secondary-90: rgba(255,224,102,.9);
   --gradient-secondary-light-80: rgba(255,224,36,.8);
   --default-font-paragraph: 2rem;
+  --small-font-paragraph: 1.75rem;
   --default-font-header: 2.5rem;
-  --default-font-sub-header: 2.2rem;
+  --default-font-sub-header: 2.25rem;
 }
 
 * {
@@ -77,6 +80,7 @@ html {
 }
 
 body {
+  height: 100%;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.5;
@@ -92,6 +96,14 @@ body {
   font-weight: 300;
   color: var(--color-white);
   word-break: keep-all;
+}
+.paragraph__link {
+  font-weight: bold;
+  color: var(--color-secondary-light);
+  letter-spacing: 1px;
+}
+.paragraph--bold {
+  font-weight: 600;
 }
 .paragraph:not(:last-child) {
   margin-bottom: 3rem;
@@ -129,6 +141,22 @@ body {
 
 .margin-right-small {
   margin-right: 10px;
+}
+
+.margin-bottom-big {
+  margin-bottom: 9rem !important;
+}
+
+.padding-x-2 {
+  padding: 0 2rem;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 /**
@@ -544,23 +572,21 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--color-primary-dark);
-  padding: 0 0 3rem 0;
-  z-index: -1;
+  background-color: var(--color-primary-dark-2);
+  padding: 3rem 2rem;
 }
 .section-professional::before {
-  position: fixed;
+  position: absolute;
   content: "";
   background-size: cover;
-  background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-position: 50% 50%;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
+  background-image: url(img/professional/professional-bg-small.webp);
   opacity: 0.5;
-  background-image: url(img/about/about-bg-small.webp);
 }
 
 .about {
@@ -602,7 +628,6 @@ body {
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding: 1rem 1rem 0 2rem;
   transition: all 2s;
 }
 .skills__box {
@@ -625,7 +650,7 @@ body {
   width: 105%;
 }
 .skills__name {
-  font-size: var(--default-font-paragraph);
+  font-size: var(--small-font-paragraph);
   color: var(--color-white);
 }
 .skills__progress {
@@ -657,17 +682,19 @@ body {
 .section-video-games {
   position: relative;
   width: 100%;
-  background-color: var(--color-primary-dark);
+  background-color: var(--color-black);
 }
 .section-video-games::before {
-  content: "";
   position: absolute;
-  background-image: url(img/video-games/video-games-bg-small.webp);
+  content: "";
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
+  background-image: url(img/video-games/video-games-bg-small.webp);
   opacity: 0.5;
 }
 
@@ -727,23 +754,29 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 3rem 2rem;
 }
 .section-tabletop::before {
-  content: "";
   position: absolute;
-  background-image: url(img/tabletop/tabletop-bg-small.webp);
+  content: "";
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
+  background-image: url(img/tabletop/tabletop-bg-small.webp);
   opacity: 0.5;
 }
 
 .showcase {
   position: relative;
-  width: 95%;
-  padding: 2rem 1rem;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.showcase:last-child {
+  margin-bottom: 0;
 }
 .showcase__title-box {
   margin-bottom: 3rem;
@@ -770,7 +803,7 @@ body {
   justify-content: center;
 }
 .showcase__image {
-  width: 48%;
+  width: 47%;
   height: auto;
   margin-bottom: 5px;
 }
@@ -784,29 +817,28 @@ body {
 .section-workshops {
   position: relative;
   width: 100%;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
   background-color: var(--color-primary-dark);
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 3rem 2rem;
 }
 .section-workshops::before {
   position: absolute;
   content: "";
-  background-image: url(img/workshops/workshops-bg-small.webp);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.5;
+  background-image: url(img/workshops/workshops-bg.webp);
+  opacity: 0.4;
 }
 
 .workshop {
   position: relative;
-  padding: 0 2rem;
 }
 .workshop__composition {
   position: relative;
@@ -837,7 +869,8 @@ body {
   margin-bottom: 3rem;
 }
 .workshop__list-item {
-  font-size: var(--default-font-paragraph);
+  font-size: var(--small-font-paragraph);
+  font-weight: 300;
   margin-bottom: 0.7rem;
   padding: 0.8rem 0;
 }
@@ -856,22 +889,41 @@ body {
 .section-achievements {
   position: relative;
   width: 100%;
-  background-color: var(--color-primary-dark);
+  background-color: var(--color-primary-dark-2);
   display: flex;
   flex-direction: column;
-  min-height: 100rem;
+  padding: 3rem 2rem;
 }
 .section-achievements::before {
   position: absolute;
   content: "";
-  background-image: url(img/achievements/achievements-bg-small.webp);
   background-size: cover;
-  background-position: 50% 50%;
   background-repeat: no-repeat;
+  background-position: 50% 50%;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.3;
+  background-image: url(img/achievements/achievements-bg-small.webp);
+  opacity: 0.5;
+}
+
+.achievement {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 9rem;
+}
+.achievement__image {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.achievement__title {
+  font-size: var(--default-font-sub-header);
+  color: var(--color-secondary-light);
+  text-align: center;
+  margin: 1rem 0;
 }
 /*# sourceMappingURL=main.css.map */

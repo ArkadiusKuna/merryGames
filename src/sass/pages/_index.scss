@@ -4,16 +4,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--color-primary-dark);
-    padding: 0 0 3rem 0;
-    z-index: -1;
+    background-color: var(--color-primary-dark-2);
+    padding: 3rem 2rem;
 
-        &::before {
-            @include fixed-bg;
-            background-image: url(img/about/about-bg-small.webp);
-        }
+    &::before {
+        @include bg-layer;
+        background-image: url(img/professional/professional-bg-small.webp);
+        opacity: .5;
+    }
 }
-
+        
 .about {
     position: relative;
     width: 100%;
@@ -57,7 +57,6 @@
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 1rem 1rem 0 2rem;
     transition: all 2s;
 
     &__box {
@@ -86,7 +85,7 @@
     }
 
     &__name {
-        font-size: var(--default-font-paragraph);
+        font-size: var(--small-font-paragraph);
         color: var(--color-white);
     }
 
@@ -124,20 +123,14 @@
 .section-video-games {
     position: relative;
     width: 100%;
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-black);
 
-        &::before {
-            content: "";
-            position: absolute;
-            background-image: url(img/video-games/video-games-bg-small.webp);
-            background-size: cover;
-            top: 0px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
-            opacity: 0.5;
-        }
+    &::before {
+        @include bg-layer;
+        background-image: url(img/video-games/video-games-bg-small.webp);
+        opacity: .5;
     }
+}
 
 .video-games-slider {
     position: relative;
@@ -202,24 +195,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 3rem 2rem;
 
     &::before {
-            content: "";
-            position: absolute;
-            background-image: url(img/tabletop/tabletop-bg-small.webp);
-            background-size: cover;
-            top: 0px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
-            opacity: 0.5;
-        }
+        @include bg-layer;
+        background-image: url(img/tabletop/tabletop-bg-small.webp);
+        opacity: .5;
+    }
 }
 
 .showcase {
     position: relative;
-        width: 95%;
-        padding: 2rem 1rem;
+    width: 100%;
+    margin-bottom: 3rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
 
     &__title-box {
         margin-bottom: 3rem ;
@@ -251,7 +243,7 @@
     }
 
     &__image {
-        width: 48%;
+        width: 47%;
         height: auto;
         margin-bottom: 5px;
 
@@ -268,30 +260,21 @@
 .section-workshops {
     position: relative;
     width: 100%;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
     background-color: var(--color-primary-dark);
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 3rem 2rem;
 
         &::before {
-            position: absolute;
-            content: "";
-            background-image: url(img/workshops/workshops-bg-small.webp);
-            background-size: cover;
-            top: 0px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
-            opacity: 0.5;
+            @include bg-layer;
+            background-image: url(img/workshops/workshops-bg.webp);
+            opacity: .4;
         }
 }
 
 .workshop {
     position: relative;
-    padding: 0 2rem;
 
     &__composition {
         position: relative;
@@ -328,7 +311,8 @@
     }
 
     &__list-item {
-        font-size: var(--default-font-paragraph);
+        font-size: var(--small-font-paragraph);
+        font-weight: 300;
         margin-bottom: 0.7rem;
         padding: .8rem 0;
 
@@ -349,23 +333,35 @@
 .section-achievements {
     position: relative;
     width: 100%;
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-primary-dark-2);
     display: flex;
     flex-direction: column;
-
-    min-height: 100rem;
+    padding: 3rem 2rem;
 
         &::before {
-            position: absolute;
-            content: "";
+            @include bg-layer;
             background-image: url(img/achievements/achievements-bg-small.webp);
-            background-size: cover;
-            background-position: 50% 50%;
-            background-repeat: no-repeat;
-            top: 0px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
-            opacity: 0.3;
+            opacity: .5;
         }
+}
+
+.achievement {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 9rem;
+
+    &__image {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    &__title {
+        font-size: var(--default-font-sub-header);
+        color: var(--color-secondary-light);
+        text-align: center;
+        margin: 1rem 0;
+    }
 }
